@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2.5em;
+            text-transform: uppercase;
+
+        }
+
+        .titulos {
+            background-color: black;
+            color: white;
+            margin-bottom: 0px;
+        }
+
+        .container {
+            /*max-width: 100%;*/
+            display: flex;
+            border: 2px solid black;
+            background-color: steelblue;
+            align-items: center;
+
+        }
+        .containerbig{
+            height: 400px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        .medio{
+            height: 150px;
+        }
+        .grande{
+            height: 200px;
+        }
+        .xgrande{
+            height: 300px;
+        }
+
+        .rowrev {
+            flex-direction: row-reverse;
+        }
+
+        .col {
+            flex-direction: column;
+        }
+        .colrev {
+            flex-direction: column-reverse;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+        .wraprev {
+            flex-wrap: wrap-reverse;
+        }
+        .end{
+            justify-content: flex-end;
+        }
+        .center{
+            justify-content: center;
+        }
+        .between{
+            justify-content: space-between
+        }
+        .around{
+            justify-content: space-around;
+        }
+        .evenly{
+            justify-content: space-evenly;
+        }
+
+        .inicio{
+            align-items: flex-start;
+        }
+        .fim{
+            align-items: flex-end;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="titulos">Flex Direction</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>row</p>
+        </div>
+        <div class="container rowrev">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>row-reverse</p>
+        </div>
+        <div class="container col">
+            <p>column</p>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+
+        </div>
+        <div class="container colrev">
+            <p>column-reverse</p>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+
+        </div>
+        <h1 class="titulos">Flex Warp</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+            <div class="box">11</div>
+            <div class="box">12</div>
+            <p>no-wrap</p>
+        </div>
+        <div class="container wrap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+            <div class="box">11</div>
+            <div class="box">12</div>
+            <p>wrap</p>
+        </div>
+        <div class="container wraprev">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+            <div class="box">11</div>
+            <div class="box">12</div>
+            <p>wrap-reverse</p>
+        </div>
+
+        <h1 class="titulos">Justify-Content</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>Flex-Start</p>
+        </div>
+        <div class="container end">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>Flex-end</p>
+        </div>
+        <div class="container center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>Center</p>
+        </div>
+        <div class="container between">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>space-between</p>
+        </div>
+        <div class="container around">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>space-around</p>
+        </div>
+        <div class="container evenly">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>space-evenly</p>
+        </div>
+
+        <h1 class="titulos">Align-itens</h1>
+        <div class="container containerbig">
+            <div class="box medio">1</div>
+            <div class="box">2</div>
+            <div class="box xgrande">3</div>
+            <div class="box grande">4</div>
+            <p>center</p>
+        </div>
+        <div class="container containerbig inicio">
+            <div class="box medio">1</div>
+            <div class="box">2</div>
+            <div class="box xgrande">3</div>
+            <div class="box grande">4</div>
+            <p>Flex-start</p>
+        </div>
+        <div class="container containerbig fim">
+            <div class="box medio">1</div>
+            <div class="box">2</div>
+            <div class="box xgrande">3</div>
+            <div class="box grande">4</div>
+            <p>Flex-end</p>
+        </div>
+        <div class="container containerbig stretch">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>Stretch</p>
+        </div>
+        <div class="container containerbig baseline">
+            <div class="box medio">1</div>
+            <div class="box">2</div>
+            <div class="box xgrande">3</div>
+            <div class="box grande">4</div>
+            <p>Baseline</p>
+        </div>
+    </div>
+</body>
+
+</html>
