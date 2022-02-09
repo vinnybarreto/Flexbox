@@ -18,45 +18,63 @@
 
         }
 
+        .tl-center {
+            text-align: center;
+        }
+
         .titulos {
             background-color: black;
             color: white;
             margin-bottom: 0px;
         }
-        .fb-pad-300{
+
+        .fb-pad-300 {
             margin-top: 10px;
             margin-bottom: 10px;
             padding-right: 300px;
+            padding-left: 10px;
         }
-        .fb-pad-200{
+
+        .fb-pad-200 {
             margin-top: 10px;
             margin-bottom: 10px;
             padding-right: 200px;
+            padding-left: 10px;
         }
+
         /*--Containers--*/
         .container {
             display: flex;
             border: 2px solid black;
             background-color: steelblue;
-            align-items: center;
-
         }
-        .containerlong{
+
+        .containerwt {
+            display: flex;
+            border: 2px solid black;
+        }
+
+
+        .containerlong {
             width: 600px;
         }
-        .containerbig{
+
+        .containerbig {
             height: 400px;
         }
-        .containerxlarge{
+
+        .containerxlarge {
             height: 600px;
             width: 600px;
         }
-        .contflex{
+
+        .contflex {
             display: flex;
             justify-content: space-evenly;
         }
+
         /*------*/
-        
+
         /*--Boxes--*/
         .box {
             width: 100px;
@@ -67,21 +85,62 @@
             border: 2px solid black;
         }
 
-        .medio{
+        .medio {
             height: 150px;
         }
-        .grande{
+
+        .grande {
             height: 200px;
         }
-        .xgrande{
+
+        .xgrande {
             height: 300px;
         }
+
+        .item{
+            padding: 1rem;
+            color: white;
+            width: 200PX;
+        }
+        .item-1{
+            background-color: #CEB992;
+        }
+        .item-2{
+            background-color: #73937E;
+        }
+        .item-3{
+            background-color: #585563;
+        }
+        .item-4{
+            background-color: #5B2E48;
+        }
+        .item-5{
+            background-color: #471323;
+        }
+        .item-6{
+            background-color: #BEE7E8;
+        }
+        .item-7{
+            background-color: #A0D2DB;
+        }
+        .item-8{
+            background-color: #7d8cc4;
+        }
+        .item-9{
+            background-color: #726DA8;
+        }
+        .item-10{
+            background-color: #594157;
+        }
+
         /*------*/
 
         /*--Direção--*/
-        .row{
-            flex-direction: row; /*Deflaut*/
+        .row {
+            flex-direction: row;
+            /*Deflaut*/
         }
+
         .rowrev {
             flex-direction: row-reverse;
         }
@@ -89,77 +148,180 @@
         .col {
             flex-direction: column;
         }
+
         .colrev {
             flex-direction: column-reverse;
         }
 
         /*--Quebra de linha--*/
-        .nowrap{
-            flex-wrap: nowrap; /*Deflaut*/
+        .nowrap {
+            flex-wrap: nowrap;
+            /*Deflaut*/
         }
+
         .wrap {
             flex-wrap: wrap;
         }
+
         .wraprev {
             flex-wrap: wrap-reverse;
         }
+
         /*------*/
 
 
         /*Justificaçáo de conteúdo*/
-        .start{
-            justify-content: flex-start; /*Deflaut*/
+        .start {
+            justify-content: flex-start;
+            /*Deflaut*/
         }
-        .end{
+
+        .end {
             justify-content: flex-end;
         }
-        .center{
+
+        .center {
             justify-content: center;
         }
-        .between{
+
+        .between {
             justify-content: space-between
         }
-        .around{
+
+        .around {
             justify-content: space-around;
         }
-        .evenly{
+
+        .evenly {
             justify-content: space-evenly;
         }
+
         /*------*/
 
         /*--Alinhamento de itens--*/
-        .inicio{
-            align-items: flex-start; /*Deflaut*/
+        .inicio {
+            align-items: flex-start;
+            /*Deflaut*/
         }
-        .fim{
+
+        .fim {
             align-items: flex-end;
         }
-        .stretch{
+
+        .centro{
+            align-items: center;
+        }
+        .stretch {
             align-items: stretch;
         }
-        .baseline{
+
+        .baseline {
             align-items: baseline;
         }
 
         /*--Alinhamento de conteúdo--*/
-        .contstart{
-            align-content: flex-start; /*Deflaut*/
+        .contstart {
+            align-content: flex-start;
+            /*Deflaut*/
         }
-        .contend{
+
+        .contend {
             align-content: flex-end;
         }
-        .contcenter{
+
+        .contcenter {
             align-content: center;
         }
-        .contstre{
+
+        .contstre {
             align-content: stretch;
         }
-        .contbeet{
+
+        .contbeet {
             align-content: space-between;
         }
-        .contaround{
+
+        .contaround {
             align-content: space-around;
         }
+
+        /*------*/
+
+        /*--Espaçamento enter elementos*/
+        .gap {
+            gap: 20px;
+        }
+
+        .colgap {
+            column-gap: 40px;
+        }
+
+        .lingap {
+            row-gap: 40px;
+        }
+
+        /*------*/
+
+        /*--Ordenação--*/
+        .first {
+            order: 1;
+        }
+
+        .second {
+            order: 2;
+        }
+
+        .thrid {
+            order: 3;
+        }
+
+        .forth {
+            order: 4;
+        }
+
+        /*----*/
+
+        /*--Crescimento das caixas*/
+        .grow1 {
+            flex-grow: 2;
+        }
+
+        .grow2 {
+            flex-grow: 4;
+        }
+
+        .grow3 {
+            flex-grow: 6;
+        }
+
+        /*--encolhimento das caixas*/
+        .shir1 {
+            flex-shrink: 2;
+        }
+
+        .shir2 {
+            flex-shrink: 4;
+        }
+
+        .shir3 {
+            flex-shrink: 6;
+        }
+
+        /*--Alinhamento de item--*/
+        .alstart{
+            align-self: flex-start;
+        }
+        .alend{
+            align-self: flex-end;
+        }
+        .alstret{
+            align-self: stretch;
+        }
+        .alcenter{
+            align-self: center;
+        }
+
+
 
     </style>
 </head>
@@ -182,14 +344,14 @@
             <p>row-reverse</p>
         </div>
         <div class="contflex">
-            <div class="container col containerlong">
+            <div class="container col containerlong centro">
                 <p>column</p>
                 <div class="box">1</div>
                 <div class="box">2</div>
                 <div class="box">3</div>
                 <div class="box">4</div>
             </div>
-            <div class="container colrev containerlong">
+            <div class="container colrev containerlong centro">
                 <p>column-reverse</p>
                 <div class="box">1</div>
                 <div class="box">2</div>
@@ -293,13 +455,6 @@
 
 
         <h1 class="titulos">Align-itens</h1>
-        <div class="container containerbig">
-            <div class="box medio">1</div>
-            <div class="box">2</div>
-            <div class="box xgrande">3</div>
-            <div class="box grande">4</div>
-            <p>center</p>
-        </div>
         <div class="container containerbig inicio">
             <div class="box medio">1</div>
             <div class="box">2</div>
@@ -313,6 +468,13 @@
             <div class="box xgrande">3</div>
             <div class="box grande">4</div>
             <p>Flex-end</p>
+        </div>
+        <div class="container containerbig centro">
+            <div class="box medio">1</div>
+            <div class="box">2</div>
+            <div class="box xgrande">3</div>
+            <div class="box grande">4</div>
+            <p>center</p>
         </div>
         <div class="container containerbig stretch">
             <div class="box">1</div>
@@ -382,7 +544,7 @@
         </div>
         <div class="contflex">
             <div class="container containerxlarge wrap contbeet">
-                
+
                 <div class="box">1</div>
                 <div class="box">2</div>
                 <div class="box">3</div>
@@ -407,6 +569,118 @@
             </div>
         </div>
 
+        <h1 class="titulos">Gap</h1>
+        <div class="contflex">
+            <div class="container containerxlarge wrap gap">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <p class="fb-pad-200">Gap</p>
+
+            </div>
+            <div class="container containerxlarge wrap colgap">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <p class="fb-pad-200">column-gap</p>
+            </div>
+        </div>
+        <div class="contflex">
+            <div class="container containerxlarge wrap lingap">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <p class="fb-pad-200">row-gap</p>
+            </div>
+        </div>
+
+        <h1 class="titulos">Order</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <p>original</p>
+        </div>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box first">2</div>
+            <div class="box">3</div>
+            <div class="box second">4</div>
+            <div class="box">5</div>
+            <div class="box thrid">6</div>
+            <div class="box">7</div>
+            <div class="box forth">8</div>
+            <p class="forth">com order</p>
+        </div>
+
+        <h1 class="titulos">Grow</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <p>original</p>
+        </div>
+        <div class="container">
+            <div class="box grow3">1</div>
+            <div class="box grow1">2</div>
+            <div class="box grow2">3</div>
+            <div class="box">4</div>
+            <p>com grow</p>
+        </div>
+
+        <h1 class="titulos">Shrink</h1>
+        <div class="contflex">
+            <div class="container containerlong">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <p>original</p>
+            </div>
+            <div class="container containerlong">
+                <div class="box shir3">1</div>
+                <div class="box shir2">2</div>
+                <div class="box">3</div>
+                <div class="box shir1">4</div>
+                <p>com shrink</p>
+            </div>
+        </div>
+
+        <h1 class="titulos">Align-self</h1>
+        <div class="containerwt containerbig">
+            <div class="item item-1 alstart">Item 1</div>
+            <div class="item item-2 alend">Item 2</div>
+            <div class="item item-3 alstret">Item 3</div>
+            <div class="item item-4 alcenter">Item 4</div>
+            <div class="item item-5 alstart">Item 5</div>
+            <div class="item item-6 alend">Item 6</div>
+            <div class="item item-7 alcenter">Item 7</div>
+            <div class="item item-8 alend">Item 8</div>
+            <div class="item item-9 alstart">Item 9</div>
+            <div class="item item-10 alstret">Item 10</div>
+        </div>
+        
     </div>
 </body>
 
