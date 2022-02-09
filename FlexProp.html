@@ -23,19 +23,41 @@
             color: white;
             margin-bottom: 0px;
         }
-
+        .fb-pad-300{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-right: 300px;
+        }
+        .fb-pad-200{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-right: 200px;
+        }
+        /*--Containers--*/
         .container {
-            /*max-width: 100%;*/
             display: flex;
             border: 2px solid black;
             background-color: steelblue;
             align-items: center;
 
         }
+        .containerlong{
+            width: 600px;
+        }
         .containerbig{
             height: 400px;
         }
-
+        .containerxlarge{
+            height: 600px;
+            width: 600px;
+        }
+        .contflex{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        /*------*/
+        
+        /*--Boxes--*/
         .box {
             width: 100px;
             height: 100px;
@@ -54,7 +76,12 @@
         .xgrande{
             height: 300px;
         }
+        /*------*/
 
+        /*--Direção--*/
+        .row{
+            flex-direction: row; /*Deflaut*/
+        }
         .rowrev {
             flex-direction: row-reverse;
         }
@@ -66,11 +93,22 @@
             flex-direction: column-reverse;
         }
 
+        /*--Quebra de linha--*/
+        .nowrap{
+            flex-wrap: nowrap; /*Deflaut*/
+        }
         .wrap {
             flex-wrap: wrap;
         }
         .wraprev {
             flex-wrap: wrap-reverse;
+        }
+        /*------*/
+
+
+        /*Justificaçáo de conteúdo*/
+        .start{
+            justify-content: flex-start; /*Deflaut*/
         }
         .end{
             justify-content: flex-end;
@@ -87,9 +125,11 @@
         .evenly{
             justify-content: space-evenly;
         }
+        /*------*/
 
+        /*--Alinhamento de itens--*/
         .inicio{
-            align-items: flex-start;
+            align-items: flex-start; /*Deflaut*/
         }
         .fim{
             align-items: flex-end;
@@ -100,13 +140,34 @@
         .baseline{
             align-items: baseline;
         }
+
+        /*--Alinhamento de conteúdo--*/
+        .contstart{
+            align-content: flex-start; /*Deflaut*/
+        }
+        .contend{
+            align-content: flex-end;
+        }
+        .contcenter{
+            align-content: center;
+        }
+        .contstre{
+            align-content: stretch;
+        }
+        .contbeet{
+            align-content: space-between;
+        }
+        .contaround{
+            align-content: space-around;
+        }
+
     </style>
 </head>
 
 <body>
     <div>
         <h1 class="titulos">Flex Direction</h1>
-        <div class="container">
+        <div class="container row">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
@@ -120,24 +181,26 @@
             <div class="box">4</div>
             <p>row-reverse</p>
         </div>
-        <div class="container col">
-            <p>column</p>
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-
+        <div class="contflex">
+            <div class="container col containerlong">
+                <p>column</p>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+            </div>
+            <div class="container colrev containerlong">
+                <p>column-reverse</p>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+            </div>
         </div>
-        <div class="container colrev">
-            <p>column-reverse</p>
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
 
-        </div>
+
         <h1 class="titulos">Flex Warp</h1>
-        <div class="container">
+        <div class="container nowrap">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
@@ -183,8 +246,9 @@
             <p>wrap-reverse</p>
         </div>
 
+
         <h1 class="titulos">Justify-Content</h1>
-        <div class="container">
+        <div class="container start">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
@@ -227,6 +291,7 @@
             <p>space-evenly</p>
         </div>
 
+
         <h1 class="titulos">Align-itens</h1>
         <div class="container containerbig">
             <div class="box medio">1</div>
@@ -263,6 +328,85 @@
             <div class="box grande">4</div>
             <p>Baseline</p>
         </div>
+
+
+        <h1 class="titulos">Align-Content</h1>
+        <div class="contflex">
+            <div class="container containerxlarge wrap contstart">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <p class="fb-pad-300">Flex-start</p>
+            </div>
+            <div class="container containerxlarge wrap contend">
+                <p class="fb-pad-300">Flex-end</p>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+            </div>
+        </div>
+        <div class="contflex">
+            <div class="container containerxlarge wrap contcenter">
+                <p class="fb-pad-300">Flex-Center</p>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+
+            </div>
+            <div class="container containerxlarge wrap contstre">
+                <p class="fb-pad-300">stretch</p>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+            </div>
+        </div>
+        <div class="contflex">
+            <div class="container containerxlarge wrap contbeet">
+                
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <p class="fb-pad-200">space-between</p>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+
+            </div>
+            <div class="container containerxlarge wrap contaround">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <p class="fb-pad-200">space-around</p>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+            </div>
+        </div>
+
     </div>
 </body>
 
